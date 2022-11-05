@@ -1,5 +1,6 @@
 .body {
-    width: 70%;
+   max-width: 70%;
+   width: 946px;
     height: 70%;
     background: #FFFFFF;
     box-shadow: 0 4px 9px rgba(0, 0, 0, 0.15);
@@ -28,13 +29,14 @@
     display: flex;
     flex-direction: column;
    justify-content: center;
-   margin-left: 20px;
+   margin-left: 50px;
 }
 
 .priceGroup {
     display: flex;
     align-items: center;
     margin-left: auto;
+    margin-right: 50px;
 
 
 }
