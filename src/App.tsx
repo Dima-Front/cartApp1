@@ -10,9 +10,9 @@ const App: React.FC = () => {
     return (
        <>
         <Header/>
-            <div className='main-body'>
+            
             <Outlet />
-        </div>
+       
         </>
     );
 }
