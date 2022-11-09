@@ -37,7 +37,7 @@ const Tree = (props: any) => {
         return (
             <TreeItem
                 onClick={nodes.parent ? () => cardStore.getCardPriceList(nodes.folder_id) : null}
-                className={nodes.parent !== '' ? 'aaa' : null}
+                className={nodes.parent !== '' ? 'tree-style' : null}
                 key={nodes.folder_id}
                 nodeId={nodes.folder_id}
                 label={

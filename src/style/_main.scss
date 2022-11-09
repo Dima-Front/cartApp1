@@ -1,18 +1,16 @@
-.header-container {
-  max-width: 100%;
-}
 
-.header1 {
+.section-one {
   background-color: black;
+  padding:  0 64px 2px 52px;
   height: 55px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .number {
   display: flex;
   align-items: center;
-  margin-left: 52px;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -24,7 +22,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2px;
 }
 
 
@@ -32,7 +29,6 @@
   display: flex;
   align-items: center;
   margin-left: auto;
-  margin-right: 64px;
 }
 
 .icons img {
@@ -46,20 +42,20 @@
   height: 10px;
   width: 9px;
   border-right: 1px solid white;
-  margin-top: 22px;
-  margin-right: 15px;
 }
 
-.header2 {
+.section-two {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 20px 5px 53px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.header2 img {
+.section-two img {
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin-left: 53px;
 }
 
 .container {
@@ -72,8 +68,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 13px;
-
 }
 
 .big-text {
@@ -94,10 +88,8 @@
 
 .header-input  {
   display: block;
-  margin-top: 10px;
-  margin-left: 52px;
-  width: 50%;
-  height: 50%;
+  margin-left: 5px;
+  margin-top: 10px ;
   background: transparent;
   border: none;
 }
@@ -114,16 +106,16 @@
   right: 80%;
 }
 
-
 .search-icon-header:focus {
   display: none;
 }
 
-
 .search-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding-bottom: 5px;
   border: 1px solid #CD9933;
   border-radius: 40px;
 }
@@ -158,22 +150,24 @@
 .page-body {
   display: flex;
   justify-content: center;
-  margin-left: auto;
+  padding-top: 80px;
+  padding-right: 20px;
 }
 
 .left-page {
-  margin-left: 150px;
-  margin-top: 80px;
   margin-right: 40px;
   display: flex;
   flex-direction: column;
 }
 
 .left-page span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
   font-weight: 400;
   font-size: 44px;
   line-height: 52px;
-  margin-left: 100px;
 }
 
 .dropdown-group {
@@ -198,7 +192,6 @@
   font-size: 16px;
   line-height: 22px;
   max-width: 100%;
-  max-height: 66px;
   margin-bottom: 66px;
   margin-top: 87px;
 }
@@ -214,12 +207,14 @@
   border-bottom: 1px solid black;
 }
 
+.container {
+  padding-top: 118px;
+}
 .main-input {
   display: flex;
   position: relative;
   flex-direction: row-reverse;
   margin-right: auto;
-  margin-top: 118px;
   max-width:100%;
 }
 
@@ -231,7 +226,7 @@
   display: flex;
 }
 
-.aaa .makeStyles-labelRoot-2 {
+.tree-style .makeStyles-labelRoot-2 {
   margin-left: 10px;
   color: black;
 }

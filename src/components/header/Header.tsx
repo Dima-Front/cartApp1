@@ -10,7 +10,7 @@ import lupa from "../../icons/lupa.svg"
 const Header = () => {
     return (
         <>
-            <div className='header1'>
+            <div className='section-one'>
                 <div className='number'>
                     +(373) 22 83-87-87
                 </div>
@@ -23,7 +23,7 @@ const Header = () => {
                 </div>
                 <div className='drop-top'><Dropdown/></div>
             </div>
-            <div className='header2'>
+            <div className='section-two'>
                 <img src={burger} alt=""/>
                 <div className='text-logo'>
                     <span className='big-text'> YOUR LOGO </span>
