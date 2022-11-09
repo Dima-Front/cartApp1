@@ -14,8 +14,6 @@ const useTreeItemStyles = makeStyles(() => ({
     labelRoot: {
         display: 'flex',
         alignItems: 'center',
-
-
     },
 
     labelText: {
@@ -28,47 +26,37 @@ const useTreeItemStyles = makeStyles(() => ({
         height: 'auto',
         color: '#0084CA',
         textDecoration: 'underline'
-
-
     },
-
-
 }));
 
-
-
-const Tree = (props:any) => {
-
+const Tree = (props: any) => {
     const {tree, labelText, ...other} = props;
     const classes = useTreeItemStyles();
     const renderTree = (nodes: { folder_id: string; name: string; children: any[]; parent: string }) => {
 
         return (
-                <TreeItem
-                    onClick={ nodes.parent ? () => cardStore.getCardPriceList(nodes.folder_id) : null}
-                    className={nodes.parent !== '' ? 'aaa' : null}
-                    key={nodes.folder_id}
-                    nodeId={nodes.folder_id}
-                    label={
-                        <div className={classes.labelRoot}> {decodeURI(nodes.name.slice(3))} </div>
-                    }
-                    classes={{
-                        content: classes.content,
-                        label: classes.label,
-                    }}
-                    {...other}
-
-                >
-                    {Array.isArray(nodes.children)
-                        ? nodes.children.map((node: any) => renderTree(node))
-                        : null}
-                </TreeItem>
-            )
-        };
-
+            <TreeItem
+                onClick={nodes.parent ? () => cardStore.getCardPriceList(nodes.folder_id) : null}
+                className={nodes.parent !== '' ? 'aaa' : null}
+                key={nodes.folder_id}
+                nodeId={nodes.folder_id}
+                label={
+                    <div className={classes.labelRoot}> {decodeURI(nodes.name.slice(3))} </div>
+                }
+                classes={{
+                    content: classes.content,
+                    label: classes.label,
+                }}
+                {...other}
+            >
+                {Array.isArray(nodes.children)
+                    ? nodes.children.map((node: any) => renderTree(node))
+                    : null}
+            </TreeItem>
+        )
+    };
 
     return (
-
         <TreeView
             className={classes.content}
             aria-label="rich object"
@@ -77,14 +65,10 @@ const Tree = (props:any) => {
             defaultExpandIcon={<ExpandMoreIcon/>}
         >
             {tree.map((el: any) => {
-               if (el.folder_id) {
-
-               }
                 return renderTree(el);
             })}
         </TreeView>
     );
-
 };
 
 export default Tree;

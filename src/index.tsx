@@ -11,22 +11,17 @@ import {
 import Basket from "./components/basket/Basket";
 import Layout from "./components/layout/Layout";
 
-
-
-
-
 const router = createBrowserRouter(createRoutesFromElements(
-    <Route path={'/'} element={<App />}>
-        <Route path={'/'} element={<Layout />} />
-        <Route path={'/cart'} element={<Basket />} />
+    <Route path={'/'} element={<App/>}>
+        <Route path={'/'} element={<Layout/>}/>
+        <Route path={'/cart'} element={<Basket/>}/>
     </Route>
 ))
 
- ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+ReactDOM.createRoot(
+    document.getElementById('root') as HTMLElement
 ).render(
-     <RouterProvider router={router}/>
-
+    <RouterProvider router={router}/>
 );
 
 

@@ -42,7 +42,6 @@
 
 .body img {
     display: flex;
-
 }
 
 .drop_content {
@@ -50,10 +49,7 @@
     max-width: 50px;
     background-color: black;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-   
 }
-
-
 
 .drop_content a {
     color: white;

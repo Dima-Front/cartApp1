@@ -7,19 +7,13 @@ interface AsideProps {
 }
 
 const Aside: React.FC<AsideProps> = ({tree}) => {
-
     return (
-        <>
-            <div className='left-page'>
-                <span>  Услуги </span>
-                <div className='dropdown-group'>
-                    <Tree tree={tree}/>
-                </div>
-
+        <div className='left-page'>
+            <span>  Услуги </span>
+            <div className='dropdown-group'>
+                <Tree tree={tree}/>
             </div>
-
-        </>
-
+        </div>
     );
 };
 

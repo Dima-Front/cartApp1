@@ -15,31 +15,26 @@ interface CardProps {
     item: any
 }
 
-const Card: React.FC<CardProps> =  ({title, price, id, item} ) => {
-
-
+const Card: React.FC<CardProps> = ({title, price, id, item}) => {
     const priceList = cardStore.priceList
-
-     const currentCard = priceList.filter((card: any) => +card.id === +id)[0]
+    const currentCard = priceList.filter((card: any) => +card.id === +id)[0]
 
     return (
-        <>
         <div className={card.body}>
             <div className={card.titleGroup}>
-                <div className={card.title}> {decodeURI (title)}</div>
+                <div className={card.title}> {decodeURI(title)}</div>
                 <div><img src={more} alt=""/></div>
             </div>
             <div className={card.priceGroup}>
                 <div className={card.price}> {price}₽</div>
-                <div id={item.id}  className={  card.basket }>
+                <div id={item.id} className={card.basket}>
                     {currentCard?.cardCount > 0
-                            ? <Counter currentCount={currentCard.cardCount} id={item?.id} width='91px' height='41px' />
-                            : <img src={basket} onClick={() => cardStore.addToCard(item?.id)} alt=""/>}
+                        ? <Counter currentCount={currentCard.cardCount} id={item?.id} width='91px' height='41px'/>
+                        : <img src={basket} onClick={() => cardStore.addToCard(item?.id)} alt=""/>}
                 </div>
             </div>
         </div>
-        </>
     );
 };
 
-export default  observer (Card) ;
+export default observer(Card);

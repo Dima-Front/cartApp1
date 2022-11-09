@@ -10,11 +10,9 @@ import lupa from "../../icons/lupa.svg"
 const Header = () => {
     return (
         <>
-
-            <div className='header1' >
-                <div className='number' >
+            <div className='header1'>
+                <div className='number'>
                     +(373) 22 83-87-87
-
                 </div>
                 <span className='line-header'> </span>
                 <div className='icons'>
@@ -22,25 +20,21 @@ const Header = () => {
                     <img src={facebook} alt=""/>
                     <img src={viber} alt=""/>
                     <img src={whatsApp} alt=""/>
-
                 </div>
-                <div className='drop-top'> <Dropdown/> </div>
-
+                <div className='drop-top'><Dropdown/></div>
             </div>
             <div className='header2'>
                 <img src={burger} alt=""/>
-                <div className='text-logo' >
+                <div className='text-logo'>
                     <span className='big-text'> YOUR LOGO </span>
                     <span className='little-text'> A D D I T I O N T E X T </span>
                 </div>
                 <div className='search-header'>
-                    <input className='header-input' type='search'  placeholder='Прайс-лист'/>
+                    <input className='header-input' type='search' placeholder='Прайс-лист'/>
                     <img className='search-icon-header' src={lupa} alt=""/>
                 </div>
             </div>
-
         </>
-        
     );
 };
 

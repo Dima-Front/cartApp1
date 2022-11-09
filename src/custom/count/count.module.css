@@ -5,10 +5,7 @@
     margin-left: 14px;
     border: 1px solid #0084CA;
     border-radius: 4px;
-
 }
-
-
 
 .body div {
     color: #0084CA;
@@ -19,8 +16,6 @@
     font-size: 22px;
     line-height: 24px;
     display: flex;
-
-
 }
 
 .minus {
@@ -33,7 +28,6 @@
 }
 
 .minus img {
-
     width: 14px;
     height: 2px;
 }

@@ -4,11 +4,8 @@ import {NavLink} from "react-router-dom";
 import cardStore from "../../store/cardStore";
 import BasketItem from "./BasketItem";
 import {observer} from "mobx-react-lite";
-import {toJS} from "mobx";
-
 
 const Basket: React.FC = observer(() => {
-
     const count = cardStore.priceList.reduce((acc: number, card: any) => {
         if (card.cardCount > 0) acc = acc + card.cardCount
         return acc
@@ -23,9 +20,7 @@ const Basket: React.FC = observer(() => {
 
     useEffect(() => {
         cardStore.getSortedCards()
-
     }, [count, price])
-
 
     return (
         <div className='main-body'>
@@ -36,7 +31,6 @@ const Basket: React.FC = observer(() => {
                     <NavLink to='/'>
                         <img src={icon} alt=""/>
                     </NavLink>
-
                 </div>
 
                 <div className="price-group-basket">
@@ -46,16 +40,15 @@ const Basket: React.FC = observer(() => {
                     <div className='order-sum'>
                         <span> Сумма заказа </span> <span> {price} {price ? '₽' : null} </span>
                     </div>
-
                 </div>
-
-                {count ? sortedCards.map((card: any) => <BasketItem key={card.id} title={card.name} id={card.id}
-                                                                     desc={card.top_parent}
-                                                                   />) : null}
-
+                {count ? sortedCards.map((card: any) => <BasketItem
+                        key={card.id}
+                        title={card.name} id={card.id}
+                        desc={card.top_parent}/>)
+                    :
+                    null}
                 <button className='basket-button'> Оформить заказ</button>
                 <div className='bottom-basket'></div>
-
             </div>
         </div>
     );
